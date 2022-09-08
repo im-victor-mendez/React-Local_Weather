@@ -1,4 +1,5 @@
 import React from 'react'
+import './Geolocation.css'
 import Temperature from './Temperature'
 class Geolocation extends React.Component {
     constructor(props) {
@@ -36,7 +37,7 @@ class Geolocation extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className='Geolocation'>
                 <h1>{this.state.country}</h1>
                 <Temperature temperature={this.state.temperature} unit={this.state.unit}/>
                 <h3>{this.state.main}</h3>
