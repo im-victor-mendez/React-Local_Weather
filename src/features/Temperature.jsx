@@ -9,13 +9,13 @@ function Temperature(props) {
             <button id='convert' onClick={function() {
                 switch(unit) {
                     case "C":
-                        document.getElementById('temperature').innerText = temperature * 1.8 + 32
+                        document.getElementById('temperature').innerText = (temperature * 1.8 + 32).toFixed(2)
                         temperature = temperature * 1.8 + 32
                         document.getElementById('convert').innerText = "°F"
                         unit = "F"
                         break
                     case "F":
-                        document.getElementById('temperature').innerText = (temperature - 32) / 1.8
+                        document.getElementById('temperature').innerText = ((temperature - 32) / 1.8).toFixed(2)
                         temperature = (temperature - 32) / 1.8
                         document.getElementById('convert').innerText = "°C"
                         unit = "C"
